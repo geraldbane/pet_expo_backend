@@ -1,10 +1,14 @@
-import { IsArray, IsNotEmpty, IsString } from "class-validator";
-
+import {  IsNotEmpty, IsString } from "class-validator";
 export class CreateDogDto{
 
 @IsNotEmpty()
 @IsString()
 readonly name : string;
+
+@IsNotEmpty()
+@IsString()
+readonly image : string;
+
 
 @IsNotEmpty()
 @IsString()
@@ -27,7 +31,6 @@ readonly origin : string;
 readonly temperament : string;
 
 @IsNotEmpty()
-@IsArray()
 @IsString({ each: true }) 
 readonly colors : string[];
 

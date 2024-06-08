@@ -36,8 +36,11 @@ export class DogsService {
     )
     }
     async findByName(name: string): Promise<Dog[]> {
-        const birds = await this.dogModel.find({ name: { $regex: new RegExp(name, "i") } });
-        return birds;
+        const dogs = await this.dogModel.find({ name: { $regex: new RegExp(name, "i") } });
+        if(!dogs){
+            throw new  NotFoundException("Dogs not found")
+           }
+        return dogs;
     }
 
 

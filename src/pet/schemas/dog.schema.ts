@@ -9,6 +9,9 @@ export class Dog {
   name: string;
 
   @Prop()
+  image:string;
+
+  @Prop()
   breed_group: string;
 
   @Prop()

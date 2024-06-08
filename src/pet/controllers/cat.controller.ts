@@ -1,9 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { CatsService } from '../services/cat.service';
 import { Cat } from '../schemas/cat.schema';
 import { CreateCatDto } from '../dto/cats/create-cat.dto';
 import { UpdateCatDto } from '../dto/cats/update-cat.dto';
-
+import { FileInterceptor } from '@nestjs/platform-express';
+import { extname } from 'path';
+import { diskStorage } from 'multer';
+import * as fs from 'fs';
 
 @Controller('cats')
 export class CatController {
@@ -27,7 +30,7 @@ async findCat(
     return this.catsService.findById(id)
 }
 
-@Put()
+@Put(':id')
 async updateCat(
     @Param('id')
     id:string,
@@ -49,4 +52,23 @@ async deleteCat(
 async searchBirdByName(@Param("name") name: string): Promise<Cat[]> {
     return this.catsService.findByName(name);
 }
+
+@Post('upload')
+@UseInterceptors(FileInterceptor('image', {
+    storage: diskStorage({
+        destination: './Images', 
+        filename: (_req, file, callback) => {
+            const randomName = Array(32).fill(null).map(() => Math.round(Math.random() * 16).toString(16)).join('');
+            callback(null, `${randomName}${extname(file.originalname)}`);
+        },
+    }),
+}))
+async uploadImage(@UploadedFile() image): Promise<{ imagePath: string }> {
+    if (!image) {
+        return { imagePath: null };
+    }
+    return { imagePath: `../Images/${image.filename}` };
 }
+}
+
+

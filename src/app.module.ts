@@ -5,6 +5,7 @@ import { PetModule } from './pet/pet.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { HttpModule } from '@nestjs/axios/dist/http.module';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   imports: [
@@ -14,6 +15,9 @@ import { HttpModule } from '@nestjs/axios/dist/http.module';
 
     }),
     MongooseModule.forRoot(process.env.DBURL),
+    MulterModule.register({
+  dest:"./Images",
+    }),
     PetModule, HttpModule],
   controllers: [AppController],
   providers: [AppService],

@@ -1,9 +1,13 @@
-import { IsNotEmpty, IsString, IsArray } from "class-validator";
+import { IsNotEmpty, IsString, } from "class-validator";
 
 export class CreateCatDto {
    @IsNotEmpty()
    @IsString()
    readonly name: string;
+
+   @IsNotEmpty()
+   @IsString()
+   readonly image: string;
  
    @IsNotEmpty()
    @IsString()
@@ -14,7 +18,6 @@ export class CreateCatDto {
    readonly temperament: string;
    
   @IsNotEmpty()
-   @IsArray()
    @IsString({ each: true }) 
    readonly colors: string[];
  

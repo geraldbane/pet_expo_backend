@@ -9,6 +9,9 @@ export class Bird {
   name: string;
 
   @Prop()
+  image:string;
+
+  @Prop()
   species: string;
 
   @Prop()
@@ -27,10 +30,10 @@ export class Bird {
   description: string;
 
   @Prop()
-  weight_kg: number;
+  weight_kg: string;
 
   @Prop()
-  height_cm: number;
+  height_cm: string;
 }
 
 export const BirdSchema = SchemaFactory.createForClass(Bird);

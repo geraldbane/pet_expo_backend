@@ -1,39 +1,53 @@
-import { IsNumber, IsOptional, IsString } from "class-validator";
+import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class UpdateBirdDto {
-    @IsOptional()
-    @IsString()
-    readonly name: string;
+  @IsString()
 
-    @IsOptional()
-    @IsString()
-    readonly species: string;
+  @IsOptional()
+  name: string;
 
-    @IsOptional()
-    @IsString()
-    readonly family: string;
+  @IsString()
+ 
+  @IsOptional()
+  description: string;
 
-    @IsOptional()
-    @IsString()
-    readonly habitat: string;
+  @IsString()
+ 
+  @IsOptional()
+  image: string;
 
-    @IsOptional()
-    @IsString()
-    readonly place_of_found: string;
-    
-    @IsOptional()
-    @IsString()
-    readonly diet: string;
+  @IsString()
+ 
+  @IsOptional()
+  species: string;
 
-    @IsOptional()
-    @IsString()
-    readonly description: string;
-    
-    @IsOptional()
-    @IsNumber()
-    readonly weight_kg: number;
+  @IsString()
+ 
+  @IsOptional()
+  family: string;
 
-    @IsOptional()
-    @IsNumber()
-   readonly height_cm: number;
-  }
+  @IsString()
+ 
+  @IsOptional()
+  habitat: string;
+
+  @IsString()
+ 
+  @IsOptional()
+  place_of_found: string;
+
+  @IsString()
+ 
+  @IsOptional()
+  diet: string;
+
+  @IsString()
+ 
+  @IsOptional()
+  weight_kg: string;
+
+  @IsString()
+ 
+  @IsOptional()
+  height_cm: string;
+}

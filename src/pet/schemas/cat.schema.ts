@@ -9,6 +9,9 @@ export class Cat {
   name: string;
 
   @Prop()
+  image: string;
+
+  @Prop()
   origin: string;
 
   @Prop()

@@ -1,9 +1,13 @@
-import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsNotEmpty, IsString } from "class-validator";
 
 export class CreateBirdDto {
   @IsNotEmpty()
   @IsString()
   readonly name: string;
+
+  @IsNotEmpty()
+  @IsString()
+  readonly image: string;
 
   @IsNotEmpty()
   @IsString()
@@ -30,10 +34,10 @@ export class CreateBirdDto {
   readonly description: string;
 
   @IsNotEmpty()
-  @IsNumber()
-  readonly weight_kg: number;
+  @IsString()
+  readonly weight_kg: string;
 
   @IsNotEmpty()
   @IsString()
- readonly height_cm: number;
+ readonly height_cm: string;
 }

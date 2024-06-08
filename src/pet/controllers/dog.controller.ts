@@ -1,9 +1,11 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { DogsService } from '../services/dog.service';
 import { Dog } from '../schemas/dog.schema';
 import { CreateDogDto } from '../dto/dogs/create-dog.dto';
 import { UpdateDogDto } from '../dto/dogs/update-dog.dto';
-
+import { FileInterceptor } from '@nestjs/platform-express';
+import { extname } from 'path';
+import { diskStorage } from 'multer';
 @Controller('dogs')
 export class DogController {
   constructor(private dogsService : DogsService){}
@@ -11,6 +13,7 @@ export class DogController {
   async getAllDogs() : Promise<Dog[]>{
       return this.dogsService.getAllDogs()
   }
+
   @Post()
   async createDog(
       @Body() dog : CreateDogDto
@@ -18,6 +21,7 @@ export class DogController {
       return this.dogsService.create(dog)
   
   }
+  
   @Get(':id')
   async findDog(
       @Param('id')
@@ -26,7 +30,7 @@ export class DogController {
       return this.dogsService.findById(id)
   }
   
-  @Put()
+  @Put(':id')
   async updateDog(
       @Param('id')
       id:string,
@@ -49,5 +53,21 @@ export class DogController {
   async searchBirdByName(@Param("name") name: string): Promise<Dog[]> {
       return this.dogsService.findByName(name);
   }
+  @Post('upload')
+@UseInterceptors(FileInterceptor('image', {
+    storage: diskStorage({
+        destination: './Images', 
+        filename: (_req, file, callback) => {
+            const randomName = Array(32).fill(null).map(() => Math.round(Math.random() * 16).toString(16)).join('');
+            callback(null, `${randomName}${extname(file.originalname)}`);
+        },
+    }),
+}))
+async uploadImage(@UploadedFile() image): Promise<{ imagePath: string }> {
+    if (!image) {
+        return { imagePath: null };
+    }
+    return { imagePath: `../Images/${image.filename}` };
+}
   }
   
