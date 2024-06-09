@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Golden Retriever",
+        "breed_group": "Sporting",
+        "size": "Large",
+        "lifespan": "10-12 years",
+        "origin": "Scotland",
+        "temperament": "Intelligent, Friendly, Devoted",
+        "colors": [
+            "Golden",
+            "Cream"
+        ],
+        "description": "The Golden Retriever is a friendly and intelligent breed known for its gentle nature and love for people. They are great family pets and excel in various roles, including as guide dogs, therapy dogs, and search and rescue dogs.",
+        "image": "../Images/18ed205c5a105b10043713852e39e109cec.jpg"
+    },
+    {
+        "name": "Labrador Retriever",
+        "breed_group": "Sporting",
+        "size": "Large",
+        "lifespan": "10-14 years",
+        "origin": "Canada",
+        "temperament": "Outgoing, Even-tempered, Gentle",
+        "colors": [
+            "Yellow",
+            "Black",
+            "Chocolate"
+        ],
+        "description": "The Labrador Retriever is one of the most popular dog breeds in the world. They are known for their friendly and outgoing nature, as well as their intelligence and trainability. Labs make excellent family pets and are often used as service dogs and therapy dogs.",
+        "image": "../Images/18ed205c5a105b10043713852e39e109cec.jpg"
+    },
+    {
+        "name": "German Shepherd",
+        "breed_group": "Herding",
+        "size": "Large",
+        "lifespan": "9-13 years",
+        "origin": "Germany",
+        "temperament": "Loyal, Confident, Courageous",
+        "colors": [
+            "Black",
+            "Tan",
+            "Sable"
+        ],
+        "description": "The German Shepherd is a versatile and intelligent breed, often used in police and military roles for their outstanding abilities in tracking, obedience, and protection. They are loyal and protective of their families and are also popular as working dogs and loyal companions.",
+        "image": "../Images/18ed205c5a105b10043713852e39e109cec.jpg"
+    },
+    {
+        "name": "Beagle",
+        "breed_group": "Hound",
+        "size": "Small to Medium",
+        "lifespan": "12-15 years",
+        "origin": "United Kingdom",
+        "temperament": "Friendly, Curious, Merry",
+        "colors": [
+            "Tri-color",
+            "Tan and White"
+        ],
+        "description": "The Beagle is a friendly and curious breed known for its keen sense of smell. They are often used in scent detection roles and are great family pets due to their playful and affectionate nature.",
+        "image": "../Images/18ed205c5a105b10043713852e39e109cec.jpg"
+    }
+]

@@ -1,0 +1,53 @@
+
+[
+    {
+    "name": "Parrot",
+    "species": "Psittacidae",
+    "family": "Psittacidae",
+    "habitat": "Tropical and Subtropical Regions",
+    "place_of_found": "Central and South America, Africa, Asia, Oceania",
+    "diet": "Fruits, Seeds, and Nectar",
+    "description": "Parrots are colorful birds known for their ability to mimic human speech and sounds.",
+    "weight_kg": "0.4",
+    "height_cm": "25",
+    "image": "../Images/5cc292fb903b9dc51c54e1f658f91021f.png"
+    },
+    {
+    "id": 40,
+    "name": "Rhea",
+    "species": "Rhea americana",
+    "family": "Rheidae",
+    "habitat": "Grasslands and Savannas",
+    "place_of_found": "South America",
+    "diet": "Omnivore (mainly plants, insects, and small vertebrates)",
+    "description": "The rhea is a large, flightless bird native to South America, and it is known for its fast running speed and strong legs.",
+    "weight_kg": "30",
+    "height_cm": "25",
+    "image": "../Images/5cc292fb903b9dc51c54e1f658f91021f.png"
+    },
+    {
+    "name": "Cockatoo",
+    "species": "Cacatuidae",
+    "family": "Cacatuidae",
+    "habitat": "Forests and Woodlands",
+    "place_of_found": "Australia, Oceania, Southeast Asia",
+    "diet": "Seeds, Nuts, and Fruits",
+    "description": "Cockatoos are large parrots with a distinctive crest on top of their heads and are known for their vocal abilities.",
+    "weight_kg": "0.5",
+    "height_cm": "25",
+    "image": "../Images/5cc292fb903b9dc51c54e1f658f91021f.png"
+    },
+    {
+    
+    "name": "Keel-billed Toucan",
+    "species": "Ramphastos sulfuratus",
+    "family": "Ramphastidae",
+    "habitat": "Rainforests",
+    "place_of_found": "Central and South America",
+    "diet": "Fruits, insects, lizards",
+    "description": "The keel-billed toucan is a colorful bird with a large and vibrant bill, known for its playful and social behavior.",
+    "weight_kg": "0.5",
+    "height_cm": "25",
+    "image": "../Images/5cc292fb903b9dc51c54e1f658f91021f.png"
+    }
+]

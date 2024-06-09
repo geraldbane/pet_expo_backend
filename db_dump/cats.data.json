@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Persian",
+        "origin": "Iran",
+        "temperament": "Sweet, Gentle, Quiet",
+        "colors": [
+            "White",
+            "Black",
+            "Blue",
+            "Cream"
+        ],
+        "description": "The Persian cat is a long-haired breed known for its luxurious coat and sweet personality. They are calm and affectionate cats that enjoy a relaxed indoor lifestyle.",
+        "image": "../Images/10210a97a110ab3627c6a81897d8679ddc9.jpg"
+    },
+    {
+        "name": "Siamese",
+        "origin": "Thailand",
+        "temperament": "Social, Vocal, Intelligent",
+        "colors": [
+            "Seal Point",
+            "Blue Point",
+            "Chocolate Point",
+            "Lilac Point"
+        ],
+        "description": "The Siamese cat is a vocal and affectionate breed known for its striking blue almond-shaped eyes. They are highly social and enjoy interactive play with their human companions.",
+        "image": "../Images/10210a97a110ab3627c6a81897d8679ddc9.jpg"
+    },
+    {
+        "name": "Maine Coon",
+        "origin": "United States",
+        "temperament": "Friendly, Playful, Gentle",
+        "colors": [
+            "Brown Tabby",
+            "Black",
+            "Red",
+            "Silver Tabby"
+        ],
+        "description": "The Maine Coon is a large and friendly breed known for its tufted ears and bushy tail. They are affectionate and sociable cats that get along well with children and other pets.",
+        "image": "../Images/10210a97a110ab3627c6a81897d8679ddc9.jpg"
+    },
+    {
+        "name": "Bengal",
+        "origin": "United States",
+        "temperament": "Active, Energetic, Intelligent",
+        "colors": [
+            "Brown Spotted",
+            "Snow Spotted",
+            "Marble"
+        ],
+        "description": "The Bengal cat is a medium to large-sized breed known for its wild appearance and energetic nature. They are highly intelligent and require mental and physical stimulation.",
+        "image": "../Images/10210a97a110ab3627c6a81897d8679ddc9.jpg"
+    }
+]
